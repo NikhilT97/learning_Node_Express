@@ -1,0 +1,39 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "do react todo application",
+      "description": "todo things are important"
+    },
+    {
+      "title": "learn javaScript",
+      "description": "todo things are important",
+      "id": 2
+    },
+    {
+      "title": "learn node js",
+      "description": "todo things are important",
+      "id": 4
+    },
+    {
+      "title": "learn express",
+      "description": "todo things are important",
+      "id": 5
+    },
+    {
+      "title": "learn express js",
+      "description": "todo things are important",
+      "id": 6
+    },
+    {
+      "title": "learn learn middlewares",
+      "description": "todo things are important",
+      "id": 7
+    },
+    {
+      "title": "learn middleware important and get, post, put, patch, delete reqs",
+      "description": "todo things are important",
+      "id": 8
+    }
+  ]
+}
