@@ -1,0 +1,39 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "do 5 pushups",
+      "description": "learn middleware and mvc"
+    },
+    {
+      "id": 2,
+      "title": "learn middleware and mvc",
+      "description": "5 pushups are must to follow"
+    },
+    {
+      "title": "do 25 pushups",
+      "description": "15 pushups are must to follow",
+      "id": 3
+    },
+    {
+      "title": "do 25 pushups",
+      "description": "5 pushups are must to follow",
+      "id": 4
+    },
+    {
+      "title": "do 45 situps",
+      "description": "5 pushups are must to follow",
+      "id": 6
+    },
+    {
+      "title": "do warmup",
+      "description": "5 pushups are must to follow",
+      "id": 7
+    },
+    {
+      "title": "do warmup 10 min",
+      "description": "5 pushups are must to follow",
+      "id": 8
+    }
+  ]
+}
