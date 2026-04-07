@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "title": "practice query params",
+      "description": "middlewares as the word conveys the meaning sit between the req and response cycle, its like a gatekeeper checks req before gets resolved",
+      "id": 2
+    },
+    {
+      "title": "practice middlewares",
+      "description": "middlewares as the word conveys the meaning sit between the req and response cycle, its like a gatekeeper checks req before gets resolved",
+      "id": 3
+    },
+    {
+      "title": "know query params and path params",
+      "description": "middlewares as the word conveys the meaning sit between the req and response cycle, its like a gatekeeper checks req before gets resolved",
+      "id": 4
+    }
+  ]
+}
