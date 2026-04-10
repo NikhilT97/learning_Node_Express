@@ -10,15 +10,17 @@ const {
   updateTodos,
   searchQuery,
 } = require("../controllers/todoControllers");
+const { getIncomingTodo } = require("../middleware/todoMiddlewares");
+
+
 
 TodoRouter.get("/list", listTodos);
 
 // query params
 TodoRouter.get("/search/", searchQuery);
 
-
 //add todo
-TodoRouter.post("/addTodo", addTodos);
+TodoRouter.post("/addTodo",getIncomingTodo, addTodos);
 
 //update-todo
 TodoRouter.patch("/update-todo/:id", updateTodos);

@@ -19,8 +19,8 @@ app.post("/addTodos", (req, res) => {
   let data = JSON.parse(fs.readFileSync("./db.json", "utf-8")); //reading existing db
   let todos = data.todos;
   let id = todos[todos.length - 1].id + 1; //last id
-  console.log("ye id hai", id);
-  let addTodos = { ...req.body, id }; // puting id into the {} object and
+  // console.log("ye id hai", id);
+  let addTodos = { ...userTodo, id }; // puting id into the {} object and
   todos.push(addTodos); //pushing id to array
   fs.writeFileSync("./db.json", JSON.stringify(data)); // updating the data
   console.log(todos);
@@ -79,10 +79,11 @@ app.delete("/deleteTodos/:todoId", (req, res) => {
     data.todos = filterTodo;
 
     fs.writeFileSync("./db.json", JSON.stringify(data));
-  }
 
-  res.json({ message: "todo deleted" });
+    res.json({ message: "todo deleted" });
+  }
 });
+
 
 app.listen(port, () => {
   console.log(`Port started with ${port} number`);
