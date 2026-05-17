@@ -10,7 +10,7 @@ const Profile = () => {
   try {
       const token = localStorage.getItem("token");
 
-    const response = await axios.get("http://localhost:5000/users/profile", {
+    const response = await axios.get(`${BASE_URL}/users/profile`, {
       headers: { Authorization: `Bearer ${token}` },
     });
 

@@ -20,7 +20,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/users/signup",
+       `${BASE_URL}/users/signup`,
         formdata,
       );
       setMessage(response.data.message);

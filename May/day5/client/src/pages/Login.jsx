@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import BASE_URL from "../config";
+
 const Login = () => {
   const navigate = useNavigate()
   const [message, setMessgage] = useState("");
@@ -15,7 +17,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/users/login",
+        `${BASE_URL}/users/login`,
         formData,
       );
 
