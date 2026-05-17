@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios  from "axios";
 import { useNavigate } from "react-router-dom";
 import Login from "./Login";
+import BASE_URL from "../config";
 
 const Signup = () => {
    const navigate = useNavigate();

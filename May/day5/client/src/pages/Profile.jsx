@@ -1,41 +1,40 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import BASE_URL from "../config";
 
 const Profile = () => {
   const navigate = useNavigate();
   const [data, setData] = useState({});
 
   const fetchData = async () => {
-  try {
+    try {
       const token = localStorage.getItem("token");
 
-    const response = await axios.get(`${BASE_URL}/users/profile`, {
-      headers: { Authorization: `Bearer ${token}` },
-    });
+      const response = await axios.get(`${BASE_URL}/users/profile`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
 
-    setData(response.data);
-
-  } catch (error) {
-    console.log(error.message)
-  }
+      setData(response.data);
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   useEffect(() => {
     fetchData();
   }, []);
 
-
-const handleLogout = () => {
-    localStorage.removeItem("token")
-    navigate('/login')
-}
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
 
   return (
     <>
-    <h1>Profile</h1>
+      <h1>Profile</h1>
       <h1> Welcome, {data.user?.name} </h1>
-      <button onClick={handleLogout} >Logout</button>
+      <button onClick={handleLogout}>Logout</button>
     </>
   );
 };
